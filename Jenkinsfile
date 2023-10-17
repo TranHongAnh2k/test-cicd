@@ -22,7 +22,7 @@ pipeline {
 
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub', url: 'https://index.docker.io/v1/') {
-                    sh 'docker build -t honganhtran/springboot .'
+                    sh 'docker build -t honganhtran/springboot'
                     sh 'docker push honganhtran/springboot'
                 }
             }
